@@ -1,4 +1,7 @@
 # **Analyse des avis de voyageurs aériens avec PySpark et Streamlit**
+## **Source des données**
+https://www.kaggle.com/datasets/sujalsuthar/airlines-reviews/data
+
 
 ## **Description du projet**
 Ce projet utilise des outils de traitement de données tels que **PySpark** et **Streamlit** pour analyser et prédire les sentiments des avis de passagers des compagnies aériennes.
