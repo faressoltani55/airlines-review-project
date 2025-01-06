@@ -1,0 +1,8 @@
+.venv
+.idea
+.env
+tests
+.pdm-python
+pdm.lock
+pyproject.toml
+data_exploration_and_analysis.ipynb
