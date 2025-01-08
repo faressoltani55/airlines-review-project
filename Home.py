@@ -159,7 +159,7 @@ with tabs[2]:
 
     tabs[2].header("Analyse des Sentiments des Reviews: ")
     tabs[2].dataframe(
-        df_with_predictions.select("Reviews", "Predicted_Sentiment", "Overall Rating"),
+        df_with_predictions.select("Reviews", "Predicted_Sentiment", "Recommended"),
         use_container_width=True
     )
 

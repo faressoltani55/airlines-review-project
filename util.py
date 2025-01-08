@@ -86,7 +86,7 @@ def train_sentiment_analysis_model(df):
     idf = IDF(inputCol="raw_features", outputCol="features")
 
     # If > 5 positif else negatif
-    df_with_labels = df.withColumn("label", (col("Overall Rating") > 5).cast("int"))
+    df_with_labels = df.withColumn("label", (col("Recommended") == "yes").cast("int"))
 
     # Split the data into training and test sets (80% train, 20% test)
     train_data, test_data = df_with_labels.randomSplit([0.8, 0.2], seed=1234)
@@ -107,7 +107,7 @@ def train_sentiment_analysis_model(df):
     evaluator = BinaryClassificationEvaluator(labelCol="label")
     st.metric(
         label="NLP Model Accuracy",
-        value="{:.2f}%".format(evaluator.evaluate(predictions))
+        value="{:.2f}%".format(evaluator.evaluate(predictions) * 100)
     )
 
     df_with_predictions = model.transform(df_with_labels)

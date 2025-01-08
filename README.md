@@ -51,7 +51,7 @@ pip install -r requirements.txt
 Pour lancer l'application Streamlit et visualiser les pages de votre projet, utilisez la commande suivante dans votre terminal :
 
 ```bash
-python -m streamlit run app.py
+python -m streamlit run Home.py
 ```
 
 Cela ouvrira l'application dans votre navigateur où vous pourrez interagir avec les différentes pages du projet.
